@@ -12,7 +12,7 @@ I want an API for my social network that uses a NoSQL database
 So that my website can handle large amounts of unstructured data
 
 
-# 💻 Usage
+# Usage
 
 - Make sure you have MongoDB installed on your machine 
 - Clone the repo
