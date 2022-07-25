@@ -4,5 +4,23 @@
     "moment": "^2.29.4",
     "mongodb": "^4.8.0",
     "mongoose": "^6.4.6"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "social-network-api",
+  "description": "Module 18- No SQL",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwapnaMenon/Social-Network-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwapnaMenon/Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/SwapnaMenon/Social-Network-API#readme"
 }
