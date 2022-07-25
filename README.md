@@ -22,8 +22,8 @@ So that my website can handle large amounts of unstructured data
 - Models
     - User
     - Thought
-    - Reaction (used as a subdocument in Thought)
-    - Friends (used as a subdocument in User)
+    - Reaction 
+    - Friends 
 
 
 # Mock-up
@@ -40,7 +40,7 @@ So that my website can handle large amounts of unstructured data
 
 Links:
 
-- Github Repo: https://github.com/ReemMDA99/Social-shout
+- Github Repo: https://github.com/SwapnaMenon/Social-Network-API
 
 
 
