@@ -50,7 +50,7 @@ const thoughtSchema = new Schema({
     toJSON:{virtuals:true}
 } )
 
-thoughtSchema.virtual("reactions").get(function(){return this.reactions.length})
+thoughtSchema.virtual("reactionAccount").get(function(){return this.reactions.length})
 
 const Thought = model ("Thought", thoughtSchema)
 module.exports = Thought
