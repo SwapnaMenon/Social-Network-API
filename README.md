@@ -16,7 +16,7 @@ So that my website can handle large amounts of unstructured data
 
 - Ensure you have MongoDB installed on your machine.
 - Install all dependencies. 
-- Run `node server.js` to run the server and make the API live
+- Run `node server.js` to run the server
 - Open Insomnia to test.- (Walk through video included below.) 
 
 
