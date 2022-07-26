@@ -12,30 +12,18 @@ I want an API for my social network that uses a NoSQL database
 So that my website can handle large amounts of unstructured data
 
 
-# Usage
+# Instructions
 
-- Make sure you have MongoDB installed on your machine 
-- Clone the repo
-- Install dependencies with `npm i`
+- Ensure you have MongoDB installed on your machine.
+- Install all dependencies. 
 - Run `node server.js` to run the server and make the API live
-- Open Insomnia to test.
-- Models
-    - User
-    - Thought
-    - Reaction 
-    - Friends 
+- Open Insomnia to test.- (Walk through video included below.) 
 
 
 # Mock-up
-[Getting started]()
 
-[User]()
+[Demo]()
 
-[Friend]()
-
-[Thought]()
-
-[Reaction]()
 
 
 Links:
