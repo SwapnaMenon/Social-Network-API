@@ -17,8 +17,8 @@ So that my website can handle large amounts of unstructured data
 - Make sure you have MongoDB installed on your machine 
 - Clone the repo
 - Install dependencies with `npm i`
-- Run `npm start` to run the server and make the API live
-- Use your browser or an app like Insomnia to test the REST API.
+- Run `node server.js` to run the server and make the API live
+- Open Insomnia to test.
 - Models
     - User
     - Thought
