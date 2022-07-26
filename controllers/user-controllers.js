@@ -80,9 +80,9 @@ const userController = {
 
 
   addFriend(req, res) {
-    User.findOneAndUpdate({ _id: req.params.userId }, { $addToSet: { friends: req.params.friendId } }, { new: true })
+    User.findOneAndUpdate({_id:req.params.userId}, {$push:{ friends: req.params.friendId } }, { new: true })
       .then((dbUserData) => {
-        
+        console.log("friend added")
         res.json(dbUserData);
       })
       .catch((err) => {

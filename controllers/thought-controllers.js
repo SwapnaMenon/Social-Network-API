@@ -27,16 +27,7 @@ const thoughtController = {
 
   createNewThought(req, res) {
     Thought.create(req.body)
-      .then((dbThoughtData) => {
-        return User.findOneAndUpdate(
-          { _id: req.body.userId },
-          { $push: { thoughts: dbThoughtData._id } },
-          { new: true }
-        );
-      })
       .then((dbUserData) => {
-        
-
         res.json({ message: 'Thought added' });
       })
       .catch((err) => {
@@ -76,20 +67,25 @@ const thoughtController = {
   },
 
  
-  addReaction(req, res) {
+  addReaction({params, body}, res){
     Thought.findOneAndUpdate(
-      { _id: req.params.thoughtId },
-      { $addToSet: { reactions: req.body } },
-      { runValidators: true, new: true }
+        {_id: params.thoughtId},
+        {$push: {reactions: body}},
+        { new: true, runValidators: true }
     )
-      .then((dbThoughtData) => {
+    .populate({path: 'reactions', select: '-__v'})
+    .select('-__v')
+    .then(dbThoughtData => {
+        if (!dbThoughtData) {
+            res.status(404).json({ message: 'Incorrect reaction data!' });
+            return;
+        }
         res.json(dbThoughtData);
-      })
-      .catch((err) => {
+    }).catch(err=> {
         console.log(err);
         res.status(500).json(err);
-      });
-  },
+    });
+},
   removeReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
